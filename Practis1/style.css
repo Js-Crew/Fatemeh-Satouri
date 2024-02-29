@@ -1,10 +1,20 @@
-body{
-    margin: 10% auto;
-    background-color: rgb(24, 23, 23);
-    color: rgb(228, 227, 227);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+* {
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Madimi+One&display=swap")
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-style: oblique;
+}
+body {
+  margin: 10% auto;
+  background-color: rgb(24, 23, 23);
+  color: rgb(228, 227, 227);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+h1 {
+  margin-bottom: 4%;
+  font-size: 50px;
+}
