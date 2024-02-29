@@ -18,3 +18,10 @@ function clickButton()
 {
 
 }
+
+
+// create li function
+function createLi(text)
+{
+
+}
