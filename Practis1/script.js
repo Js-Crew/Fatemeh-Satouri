@@ -2,7 +2,7 @@
 let form = document.getElementById("form");
 let textInput = document.getElementById("text");
 let btnInput = document.getElementById("button");
-let ul = document.getElementById('ul')
+let ul = document.getElementById("ul");
 
 // add event submit for form because when click button submit form is refresh
 
@@ -30,5 +30,7 @@ function createLi(text) {
   a.classList.add("delete");
   span.append(a);
   li.append(span);
+  ul.append(li);
+  textInput.value = "";
 }
 // createLi('jdj')
