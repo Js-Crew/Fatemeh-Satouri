@@ -1,6 +1,7 @@
 * {
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Madimi+One&display=swap")
-  font-family: "Bebas Neue", sans-serif;
+      font-family: "Bebas Neue",
+    sans-serif;
   font-weight: 600;
   font-style: oblique;
 }
@@ -17,4 +18,15 @@ body {
 h1 {
   margin-bottom: 4%;
   font-size: 50px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#form > label {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
