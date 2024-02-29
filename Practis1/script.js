@@ -11,3 +11,10 @@ form.addEventListener('submit' , e => {
     // Prevent the default form of form
     e.preventDefault();
 })
+
+// add click event for button
+btnInput.addEventListener('click' , clickButton)
+function clickButton()
+{
+
+}
