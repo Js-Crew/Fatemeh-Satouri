@@ -6,7 +6,7 @@
   font-style: oblique;
 }
 body {
-  margin: 8% auto;
+  margin: 5% auto;
   background-color: rgb(24, 23, 23);
   color: rgb(228, 227, 227);
   display: flex;
@@ -16,9 +16,10 @@ body {
 }
 
 h1 {
-  margin-bottom: 4%;
+  margin-bottom: 5%;
   font-size: 50px;
-  color:  rgb(209, 189, 16);;
+  color:  rgb(209, 189, 16);
+  user-select: none;
 }
 
 #form {
@@ -34,7 +35,8 @@ h1 {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 22px;
+  font-size: 28px;
+  user-select: none;
 }
 #form > input:first-of-type {
   width: 50%;
@@ -62,4 +64,12 @@ h1 {
 #form > input:last-of-type:hover {
 transform: scale(1.2);
 transition-duration: 0.5s;
+}
+
+h3{
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    user-select: none;
 }
