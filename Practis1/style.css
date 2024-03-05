@@ -103,9 +103,10 @@ li {
 }
 
 span {
+  color: white;
   padding: 2%;
   width: 25%;
-  background-color: rgb(125, 121, 81);
+  background-color: rgba(81, 80, 64, 0.126);
   height: 0px;
   display: flex;
   justify-content: space-between;
