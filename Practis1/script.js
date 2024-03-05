@@ -7,9 +7,13 @@ let ul = document.getElementById("ul");
 let array = [];
 let numbers = [];
 
-
-
+// call local storage
 checkLocalStorage();
+
+// set item in localStorage
+function addNoteToLocalStorage() {
+  localStorage.setItem("note", JSON.stringify(array));
+}
 
 // add event submit for form because when click button submit form is refresh
 form.addEventListener("submit", (e) => {
@@ -51,7 +55,7 @@ function addNote(text) {
   };
 
   array.push(obj);
-  localStorage.setItem("note", JSON.stringify(array));
+  addNoteToLocalStorage();
 }
 
 // create random id by date and alphabet
@@ -80,9 +84,9 @@ function checkLocalStorage() {
   }
 }
 
-// add note in ul
-// function addNoteToList(note) {
-//   createLi(note.note); // Create list item for the note
-// }
+// add note item in ul
+function addNoteToList(note) {
+  createLi(note.note); // Create list item for the note
+}
 
-// array.forEach(addNoteToList);
+array.forEach(addNoteToList);
