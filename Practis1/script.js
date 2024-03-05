@@ -3,6 +3,7 @@ let form = document.getElementById("form");
 let textInput = document.getElementById("text");
 let btnInput = document.getElementById("button");
 let ul = document.getElementById("ul");
+let deleteBtn = document.querySelector(".delete");
 
 let array = [];
 let numbers = [];
@@ -37,7 +38,7 @@ function createLi(text) {
   let span = document.createElement("span");
   span.innerHTML = text;
   let a = document.createElement("a");
-  a.textContent = "X";
+  a.textContent = "❌";
   a.classList.add("delete");
   span.append(a);
   span.setAttribute("data-LSD", "");
@@ -45,6 +46,18 @@ function createLi(text) {
   ul.append(li);
   textInput.value = "";
 }
+
+
+// when click on delete button note in clear
+ul.addEventListener("click", deleteNote);
+function deleteNote(e) {
+  console.log(e.target.nodeName);
+  let parent = e.target.parentElement;
+  if (e.target.nodeName === "A") {
+    parent.classList.add("CallLI");
+  }
+}
+
 // add localStorage|| object include date and LSDId || object add array and set in localStorage
 function addNote(text) {
   let l = new Date();
@@ -90,3 +103,5 @@ function addNoteToList(note) {
 }
 
 array.forEach(addNoteToList);
+
+
