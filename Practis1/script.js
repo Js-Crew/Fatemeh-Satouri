@@ -38,7 +38,7 @@ function createLi(text) {
   let span = document.createElement("span");
   span.innerHTML = text;
   let a = document.createElement("a");
-  a.textContent = "❌";
+  a.textContent = "🗑️";
   a.classList.add("delete");
   span.append(a);
   span.setAttribute("data-LSD", "");
