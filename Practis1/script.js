@@ -47,7 +47,6 @@ function createLi(text) {
   textInput.value = "";
 }
 
-
 // when click on delete button note in clear
 ul.addEventListener("click", deleteNote);
 function deleteNote(e) {
@@ -55,6 +54,9 @@ function deleteNote(e) {
   let parent = e.target.parentElement;
   if (e.target.nodeName === "A") {
     parent.classList.add("CallLI");
+    // when delete in html then delete in localStorage
+    array.splice(array.indexOf(parent), 1);
+    addNoteToLocalStorage();
   }
 }
 
@@ -103,5 +105,3 @@ function addNoteToList(note) {
 }
 
 array.forEach(addNoteToList);
-
-
