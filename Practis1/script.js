@@ -3,11 +3,15 @@ let form = document.getElementById("form");
 let textInput = document.getElementById("text");
 let btnInput = document.getElementById("button");
 let ul = document.getElementById("ul");
+
 let array = [];
 let numbers = [];
 
-// add event submit for form because when click button submit form is refresh
 
+
+checkLocalStorage();
+
+// add event submit for form because when click button submit form is refresh
 form.addEventListener("submit", (e) => {
   // add event object
   // Prevent the default form of form
@@ -47,7 +51,7 @@ function addNote(text) {
   };
 
   array.push(obj);
-  localStorage.setItem("not", JSON.stringify(array));
+  localStorage.setItem("note", JSON.stringify(array));
 }
 
 // create random id by date and alphabet
@@ -63,4 +67,22 @@ function createLSDId() {
   } else {
     alert("id is exist");
   }
+
+  return rand;
 }
+
+// check localStorage
+function checkLocalStorage() {
+  if (!localStorage.getItem("note")) {
+    localStorage.setItem("note", JSON.stringify(array));
+  } else {
+    array = JSON.parse(localStorage.getItem("note")); // Retrieve the data from local storage
+  }
+}
+
+// add note in ul
+// function addNoteToList(note) {
+//   createLi(note.note); // Create list item for the note
+// }
+
+// array.forEach(addNoteToList);
