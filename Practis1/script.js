@@ -28,8 +28,15 @@ btnInput.addEventListener("click", clickButton);
 function clickButton() {
   // select input value
   let text = textInput.value;
-  createLi(text);
-  addNote(text);
+  // check user input | user can not enter nothing value
+  if (text == "") {
+    // show alert
+    alert("you should add note");
+  } else {
+    // doing task
+    createLi(text);
+    addNote(text);
+  }
 }
 
 // create li function
