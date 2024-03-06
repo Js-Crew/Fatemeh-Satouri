@@ -109,10 +109,14 @@ span {
   background-color: rgba(81, 80, 64, 0.126);
   height: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   border-radius: 13px;
   align-items: center;
   flex-direction: row-reverse;
+}
+
+span > a:first-of-type{
+  margin-right: 50%;
 }
 
 /* delete button */

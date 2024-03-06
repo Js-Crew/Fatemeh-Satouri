@@ -42,15 +42,27 @@ function clickButton() {
 // create li function
 function createLi(text) {
   let li = document.createElement("li");
+  // create span
   let span = document.createElement("span");
   span.innerHTML = text;
+  // add delete button
   let a = document.createElement("a");
+  // add edit button
+  let e = document.createElement("p");
   a.textContent = "🗑️";
   a.classList.add("delete");
+  // add delete button to span
   span.append(a);
+  // add edit button to span
+  e.textContent = "🖋️";
+  e.classList.add("delete");
+  span.append(e);
   span.setAttribute("data-LSD", "");
+  // add span to li
   li.append(span);
+  // add li to ul
   ul.append(li);
+  // then finish input is clear
   textInput.value = "";
 }
 
@@ -63,6 +75,20 @@ function deleteNote(e) {
     parent.classList.add("CallLI");
     // when delete in html then delete in localStorage
     array.splice(array.indexOf(parent), 1);
+    addNoteToLocalStorage();
+  }
+}
+// when click on edit button note
+ul.addEventListener("click", editNote);
+function editNote(e) {
+  let parent = e.target.parentElement;
+  if (e.target.nodeName === "P") {
+    let parent = e.target.parentElement;
+    let dialog = prompt("enter text:");
+    let eFin = (parent.innerText = dialog);
+
+    // when delete in html then delete in localStorage
+
     addNoteToLocalStorage();
   }
 }
